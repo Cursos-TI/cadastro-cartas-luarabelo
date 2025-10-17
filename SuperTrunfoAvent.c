@@ -4,7 +4,7 @@ int main(){
     char estado1, estado2;
     char cod1[4], cod2[4], cidade1[50], cidade2[50]; 
     int  pop1, pop2, turismo1, turismo2;
-    double area1, area2, pib1, pib2;
+    double area1, area2, pib1, pib2, densi1, densi2, pibperc1, pibperc2;
 
     //cadastro de cartas
     printf("  Bem-vindo ao Super Trunfo - Nivel Novato!"); //cabecalho inicial
@@ -33,6 +33,7 @@ printf("====================================================\n");
 
         printf("Numero de pontos turisticos: \n");
         scanf("%d", &turismo1);
+        
 
     printf("\n"); //espaco dentre entradas
 
@@ -59,6 +60,12 @@ printf("====================================================\n");
         printf("Numero de pontos turisticos: \n");
         scanf("%d", &turismo2);
     
+    // area de calculos
+    densi1 = pop1 / area1;
+    densi2 = pop2 / area2;
+
+    pibperc1 = pib1 / pop1;
+    pibperc2 = pib2 / pop2;
 
     //exibicao das cartas
     printf("\n\n"); //espaco entre entradas e saidas
@@ -70,6 +77,8 @@ printf("====================================================\n");
     printf("Área:%.2lf km²\n", area1);
     printf("PIB:%.2lf bilhões de reais\n", pib1);
     printf("Numero de pontos turisticos: %d\n", turismo1);
+    printf("Densidade Populacional:%.2lf hab/km²\n", densi1);
+    printf("PIB per Capita:%.2lf reais\n", pibperc1);
 
     printf("\n"); //espaco entre saidas
     printf("======Cadastro da Carta 2=======\n"); //breve cabecalho
@@ -80,6 +89,8 @@ printf("====================================================\n");
     printf("Área:%.2lf km²\n", area2);
     printf("PIB:%.2lf bilhões de reais\n", pib2);
     printf("Numero de pontos turisticos: %d\n", turismo2);
+    printf("Densidade Populacional:%.2lf hab/km²\n", densi2);
+    printf("PIB per Capita:%.2lf reais\n", pibperc2);
 
     return 0; 
 }
